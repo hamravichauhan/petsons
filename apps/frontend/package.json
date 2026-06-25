@@ -1,0 +1,11 @@
+{
+  "name": "@petsons/frontend",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Frontend coming soon...'",
+    "build": "echo 'Building frontend...'",
+    "lint": "echo 'Linting frontend...'",
+    "clean": "rm -rf .next"
+  }
+}

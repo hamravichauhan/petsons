@@ -1,5 +1,5 @@
 {
-  "name": "@petsons/ui",
+  "name": "@petsons/utils",
   "version": "0.0.1",
   "private": true,
   "main": "./src/index.ts",
@@ -7,15 +7,11 @@
   "scripts": {
     "lint": "tsc --noEmit",
     "type-check": "tsc --noEmit",
+    "test": "vitest run",
     "clean": "rm -rf dist"
   },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
   "devDependencies": {
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "typescript": "^5.5.0"
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
   }
 }

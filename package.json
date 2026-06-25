@@ -1,20 +1,33 @@
 {
-  "name": "patson-platform",
+  "name": "petsons",
+  "version": "0.1.0",
   "private": true,
+  "description": "PATSON B2B Wholesale Marketplace - Concentrated Beverages, Jams & Syrups",
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "type-check": "turbo type-check",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "clean": "turbo clean",
+    "docker:up": "docker compose -f docker/docker-compose.yml up -d",
+    "docker:down": "docker compose -f docker/docker-compose.yml down",
+    "db:migrate": "turbo db:migrate",
+    "db:seed": "turbo db:seed",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "prettier": "^3.7.4",
-    "turbo": "^2.10.0",
-    "typescript": "5.9.2"
+    "@types/node": "^22.0.0",
+    "husky": "^9.0.0",
+    "prettier": "^3.3.0",
+    "turbo": "^2.0.0",
+    "typescript": "^5.5.0"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {
-    "node": ">=18"
+    "node": ">=22.0.0",
+    "pnpm": ">=9.0.0"
   }
 }

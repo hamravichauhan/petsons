@@ -1,0 +1,11 @@
+{
+  "name": "@petsons/api",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'API coming soon...'",
+    "build": "echo 'Building API...'",
+    "lint": "echo 'Linting API...'",
+    "clean": "rm -rf dist"
+  }
+}

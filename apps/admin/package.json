@@ -1,0 +1,11 @@
+{
+  "name": "@petsons/admin",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "echo 'Admin coming soon...'",
+    "build": "echo 'Building admin...'",
+    "lint": "echo 'Linting admin...'",
+    "clean": "rm -rf .payload dist"
+  }
+}
