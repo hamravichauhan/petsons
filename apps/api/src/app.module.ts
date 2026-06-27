@@ -9,6 +9,8 @@ import jwtConfig from './config/jwt.config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './modules/auth/auth.module';
+import { CatalogModule } from './modules/catalog/catalog.module';
+import { PricingModule } from './modules/pricing/pricing.module';
 
 @Module({
   imports: [
@@ -29,11 +31,13 @@ import { AuthModule } from './modules/auth/auth.module';
         database: config.get<string>('database.database'),
         autoLoadEntities: true,
         synchronize: false,
-        logging: config.get<string>('app.nodeEnv') === 'development',
+        logging: false,
       }),
     }),
     EventEmitterModule.forRoot(),
     AuthModule,
+    CatalogModule,
+    PricingModule,
   ],
   controllers: [AppController],
   providers: [AppService],
