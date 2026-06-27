@@ -11,6 +11,8 @@ import { AppService } from './app.service';
 import { AuthModule } from './modules/auth/auth.module';
 import { CatalogModule } from './modules/catalog/catalog.module';
 import { PricingModule } from './modules/pricing/pricing.module';
+import { RfqModule } from './modules/rfq/rfq.module';
+import { OrdersModule } from './modules/orders/orders.module';
 
 @Module({
   imports: [
@@ -38,6 +40,8 @@ import { PricingModule } from './modules/pricing/pricing.module';
     AuthModule,
     CatalogModule,
     PricingModule,
+    RfqModule,
+    OrdersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
