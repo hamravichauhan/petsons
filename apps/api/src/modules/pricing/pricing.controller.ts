@@ -11,12 +11,14 @@ export class PricingController {
     @Query('packagingUnitId') packagingUnitId: string,
     @Query('quantity') quantity: string,
     @Query('tier') tier: string,
+    @Query('organizationId') organizationId: string,
   ) {
     return this.pricingService.calculatePrice({
       productId,
       packagingUnitId,
       quantity: parseInt(quantity, 10) || 1,
       tier: tier || 'BRONZE',
+      organizationId,
     });
   }
 

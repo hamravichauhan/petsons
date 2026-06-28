@@ -13,14 +13,11 @@ import { CatalogModule } from './modules/catalog/catalog.module';
 import { PricingModule } from './modules/pricing/pricing.module';
 import { RfqModule } from './modules/rfq/rfq.module';
 import { OrdersModule } from './modules/orders/orders.module';
+import { ComplianceModule } from './modules/compliance/compliance.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      isGlobal: true,
-      load: [appConfig, databaseConfig, jwtConfig],
-      envFilePath: '.env',
-    }),
+    ConfigModule.forRoot({ isGlobal: true, load: [appConfig, databaseConfig, jwtConfig], envFilePath: '.env' }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -42,6 +39,7 @@ import { OrdersModule } from './modules/orders/orders.module';
     PricingModule,
     RfqModule,
     OrdersModule,
+    ComplianceModule,
   ],
   controllers: [AppController],
   providers: [AppService],
